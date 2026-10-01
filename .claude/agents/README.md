@@ -7,7 +7,7 @@ owner)** and makes the final day-to-day call, with every department beneath.
 
 ## How to use it
 
-- **Run `/dev-company <task>`.** The fastest way in — a slash command
+- **Run `/dev-company <task>`.** The fastest way in — a skill
   (installed in this repo and at the user level) that routes your request to
   the CEO. Run `/dev-company` with no arguments for an intro and roster.
 - **Talk to the CEO.** For anything multi-step or strategic, ask Claude to use
