@@ -68,19 +68,19 @@ never clobbers your existing `CLAUDE.md`.
  ai-security-engineer
 ```
 
-## Full roster (30 agents)
+## Full roster (35 agents)
 
 | Department | Agents |
 |---|---|
 | **Executive** | `ceo`, `cto`, `ciso` |
-| **Engineering** | `vp-engineering`, `senior-backend-engineer`, `senior-frontend-engineer`, `mobile-engineer`, `qa-automation-engineer`, `devops-sre-engineer` |
+| **Engineering** | `vp-engineering`, `senior-backend-engineer`, `senior-frontend-engineer`, `mobile-engineer`, `qa-automation-engineer`, `devops-sre-engineer`, `qa-lead`, `code-reviewer`, `performance-engineer` |
 | **AI / ML** | `ai-research-lead`, `ml-engineer`, `ai-security-engineer` |
 | **Security** | `red-team-lead`, `blue-team-defender`, `soc-analyst`, `threat-intel-analyst`, `incident-response-lead`, `appsec-engineer` |
 | **Governance & Legal** | `grc-compliance-officer`, `legal-counsel` |
 | **Data** | `data-engineer`, `data-scientist` |
-| **Product & Design** | `product-manager`, `ux-designer` |
+| **Product & Design** | `product-manager`, `ux-designer`, `ux-researcher` |
 | **Infrastructure & IT** | `cloud-architect`, `it-sysadmin` |
-| **Business & Ops** | `project-manager`, `technical-writer`, `finance-controller`, `hr-lead` |
+| **Business & Ops** | `project-manager`, `technical-writer`, `finance-controller`, `hr-lead`, `internal-auditor` |
 
 ## Security & authorization policy (important)
 
