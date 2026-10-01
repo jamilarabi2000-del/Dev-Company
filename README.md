@@ -10,7 +10,7 @@ The full org chart, roster, usage, and security policy live in
 
 ## Quick start
 
-- **Run the slash command:** `/dev-company <what you want done>` — routes your
+- **Run the skill:** `/dev-company <what you want done>` — routes your
   request to the CEO, who delegates across departments and reports back. Run
   `/dev-company` with no arguments for an intro and the roster.
 - **Use the company in this repo:** the agents are already in `.claude/agents/`.
@@ -36,7 +36,7 @@ The full org chart, roster, usage, and security policy live in
 
 ## Install it anywhere
 
-`/dev-company` is a user-level command, so it works in every project, but only
+`/dev-company` is a user-level skill, so it works in every project, but only
 where it has been installed. Each machine or cloud environment needs one setup.
 
 **Cloud environment (every new session):** paste this into the environment's
@@ -48,14 +48,14 @@ rm -rf /tmp/dc-boot && git clone --depth 1 --branch main https://github.com/jami
 ```
 
 **Your own computer:** run the same line once in a terminal, then restart
-Claude Code (commands load at startup).
+Claude Code (skills load at startup).
 
 Requires access to github.com from that environment. It installs the agents,
-the `/dev-company` command, and the CEO-routing block into `~/.claude/`.
+the `/dev-company` skill, and the CEO-routing block into `~/.claude/`.
 
 A Claude Code plugin is not used on purpose: plugin commands and agents are
 always namespaced (`/dev-company:dev-company`, `dev-company:ceo`), so the bare
-`/dev-company` command is only possible as a user-level command. The plain
+`/dev-company` name is only possible as a user-level skill or command. The plain
 claude.ai chat and mobile app do not support custom commands or agents.
 
 ## The team (35 agents)
