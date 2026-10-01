@@ -10,7 +10,10 @@ owner)** and makes the final day-to-day call, with every department beneath.
 - **Talk to the CEO.** For anything multi-step or strategic, ask Claude to use
   the `ceo` agent (e.g. *"CEO, plan and build X"*). The CEO frames the goal,
   delegates to the right departments, integrates the work, and reports back to
-  you with decisions, trade-offs, and recommendations.
+  you with decisions, trade-offs, and recommendations. **CEO routing is the
+  default** — a `CLAUDE.md` (in this repo and at the user level) tells Claude to
+  route to the `ceo` agent whenever you say *"Dev-Company"*, *"the company"*,
+  *"the team"*, or *"CEO"*, or ask for broad end-to-end work.
 - **Or call a specialist directly** when you know who you need
   (e.g. *"ask the appsec-engineer to review this diff"*).
 - Claude Code can also auto-delegate to these agents based on their
@@ -22,7 +25,9 @@ These agents are installed at the **user level** (`~/.claude/agents/`), so the
 company is available in *any* project on this account — not just this repo. A
 version-controlled copy also lives in this repo under `.claude/agents/`.
 Run `.claude/agents/install.sh` to (re)install the user-level copy on any
-machine.
+machine. The installer also adds a small managed **Dev-Company** block to
+`~/.claude/CLAUDE.md` so CEO routing works globally — it merges safely and
+never clobbers your existing `CLAUDE.md`.
 
 ## Org chart
 
