@@ -24,6 +24,13 @@ The full org chart, roster, usage, and security policy live in
   bash .claude/agents/install.sh
   ```
 
+- **Auto-install:** `.claude/settings.json` has a `SessionStart` hook that runs
+  `install.sh` whenever Claude Code starts in this project, so the user-level
+  install refreshes itself (and self-heals after a container reset). It is
+  failure-safe (`|| true`) and never blocks startup. Note it fires when a
+  session starts *in this repo*; in a brand-new environment, open the repo once
+  (or run the installer) and the company becomes global from then on.
+
 - **Call a specialist directly:** e.g. *"ask the `appsec-engineer` to review
   this diff"* or *"have the `cloud-architect` design the infra."*
 
