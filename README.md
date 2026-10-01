@@ -10,6 +10,9 @@ The full org chart, roster, usage, and security policy live in
 
 ## Quick start
 
+- **Run the slash command:** `/dev-company <what you want done>` — routes your
+  request to the CEO, who delegates across departments and reports back. Run
+  `/dev-company` with no arguments for an intro and the roster.
 - **Use the company in this repo:** the agents are already in `.claude/agents/`.
   Ask Claude: *"CEO, plan and build …"* and the CEO will delegate across
   departments and report back to you.

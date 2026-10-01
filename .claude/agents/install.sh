@@ -11,11 +11,13 @@
 set -euo pipefail
 
 SRC_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_ROOT="$(cd "$SRC_DIR/../.." && pwd)"
 CLAUDE_DIR="${CLAUDE_HOME:-$HOME/.claude}"
 DEST_DIR="$CLAUDE_DIR/agents"
+CMD_DIR="$CLAUDE_DIR/commands"
 CLAUDE_MD="$CLAUDE_DIR/CLAUDE.md"
 
-mkdir -p "$DEST_DIR"
+mkdir -p "$DEST_DIR" "$CMD_DIR"
 
 # 1) Install agents (skip README).
 count=0
@@ -26,6 +28,12 @@ for f in "$SRC_DIR"/*.md; do
   count=$((count + 1))
 done
 echo "Installed $count company agents to $DEST_DIR"
+
+# 1b) Install the /dev-company slash command (available in every project).
+if [ -f "$REPO_ROOT/.claude/commands/dev-company.md" ]; then
+  cp "$REPO_ROOT/.claude/commands/dev-company.md" "$CMD_DIR/dev-company.md"
+  echo "Installed /dev-company slash command to $CMD_DIR"
+fi
 
 # 2) Install/refresh the managed routing block in ~/.claude/CLAUDE.md.
 BEGIN="<!-- BEGIN DEV-COMPANY (managed block) -->"
@@ -72,4 +80,4 @@ fi
 
 echo
 echo "Done. The company (CEO + departments) is now available in any Claude Code project."
-echo "Summon it with:  \"CEO, ...\"  or  \"Dev-Company, ...\"  or call a specialist by name."
+echo "Summon it with:  /dev-company <task>  ·  \"CEO, ...\"  ·  or call a specialist by name."

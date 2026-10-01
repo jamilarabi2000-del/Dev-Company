@@ -7,6 +7,9 @@ owner)** and makes the final day-to-day call, with every department beneath.
 
 ## How to use it
 
+- **Run `/dev-company <task>`.** The fastest way in — a slash command
+  (installed in this repo and at the user level) that routes your request to
+  the CEO. Run `/dev-company` with no arguments for an intro and roster.
 - **Talk to the CEO.** For anything multi-step or strategic, ask Claude to use
   the `ceo` agent (e.g. *"CEO, plan and build X"*). The CEO frames the goal,
   delegates to the right departments, integrates the work, and reports back to
