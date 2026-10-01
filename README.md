@@ -34,6 +34,30 @@ The full org chart, roster, usage, and security policy live in
 - **Call a specialist directly:** e.g. *"ask the `appsec-engineer` to review
   this diff"* or *"have the `cloud-architect` design the infra."*
 
+## Install it anywhere
+
+`/dev-company` is a user-level command, so it works in every project, but only
+where it has been installed. Each machine or cloud environment needs one setup.
+
+**Cloud environment (every new session):** paste this into the environment's
+Setup script (cloud environment menu in the session title bar, then Edit). It
+is safe to re-run and never blocks a session if it fails:
+
+```bash
+rm -rf /tmp/dc-boot && git clone --depth 1 --branch main https://github.com/jamilarabi2000-del/Dev-Company /tmp/dc-boot && bash /tmp/dc-boot/.claude/agents/install.sh; rm -rf /tmp/dc-boot; true
+```
+
+**Your own computer:** run the same line once in a terminal, then restart
+Claude Code (commands load at startup).
+
+Requires access to github.com from that environment. It installs the agents,
+the `/dev-company` command, and the CEO-routing block into `~/.claude/`.
+
+A Claude Code plugin is not used on purpose: plugin commands and agents are
+always namespaced (`/dev-company:dev-company`, `dev-company:ceo`), so the bare
+`/dev-company` command is only possible as a user-level command. The plain
+claude.ai chat and mobile app do not support custom commands or agents.
+
 ## The team (35 agents)
 
 - **Executive:** `ceo`, `cto`, `ciso`
